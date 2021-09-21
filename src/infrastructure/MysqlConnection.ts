@@ -1,4 +1,4 @@
-import mysql, { Pool } from "mysql";
+import mysql, { Pool } from "mysql2";
 import { IDBConnection } from "./IDBConnection";
 
 class MysqlConnection extends IDBConnection {

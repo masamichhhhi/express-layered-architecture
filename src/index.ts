@@ -16,6 +16,9 @@ const controllers = {
   user: new UserController(findUserUsecase),
 };
 
+router.get("/", (req, res) => {
+  res.send("hello world");
+});
 router.get("/users", controllers.user.findUser);
 
 server.use(router);
