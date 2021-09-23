@@ -8,7 +8,7 @@ class MysqlConnection extends IDBConnection {
     this.pool = mysql.createPool({
       connectionLimit: 5,
       host: process.env.DB_HOST_DEV,
-      user: process.env.MYSQL_USER,
+      user: "root",
       password: process.env.MYSQL_PASSWORD,
       database: process.env.MYSQL_DATABASE,
       port: Number(process.env.DB_PORT),

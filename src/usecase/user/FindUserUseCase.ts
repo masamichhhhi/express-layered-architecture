@@ -9,6 +9,7 @@ class FindUserUseCase {
   }
 
   public async getUser(request: FindUserRequest): Promise<FindUserResponse> {
+    console.log(request.id);
     const user = await this.userReposiory.find(request.id);
 
     return {

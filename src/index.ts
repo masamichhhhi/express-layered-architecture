@@ -19,7 +19,9 @@ const controllers = {
 router.get("/", (req, res) => {
   res.send("hello world");
 });
-router.get("/users", controllers.user.findUser);
+router.get("/users/:id", (req, res) => {
+  controllers.user.findUser(req, res);
+});
 
 server.use(router);
 server.listen(3000, () => {
